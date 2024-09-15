@@ -1,0 +1,18 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align everything to the left */
+    padding: 20px;
+  }
+  
+  .home-image {
+    width: 100%;
+    height: auto;
+    margin-left: 100; /* Aligns image to the left */
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
