@@ -1,97 +1,100 @@
+/* Main container for the navigation bar */
 .frame {
-    align-items: center;
-    display: flex;
-    gap: 800px;
-    height: 133px;
-    position: relative;
-    width: 682px;
+  display: flex;
+  justify-content: space-between; /* Space between items for a balanced layout */
+  align-items: center;
+  padding: 0 5px; /* Adds padding on left and right */
+  background-color: #333; /* Dark background for a modern look */
+  height: 60px; /* Reasonable height for nav */
+  width: 100%; /* Full width of the page */
+  position: fixed; /* Stays at the top of the page */
+  top: 0;
+  z-index: 1000; /* Ensures the nav stays on top of other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds slight shadow for depth */
+}
+
+/* Style for the nav items container */
+.frame .div {
+  display: flex;
+  gap: 200px; /* Space between the text links */
+}
+
+/* Common styling for all text links */
+.frame .text-wrapper,
+.frame .text-wrapper-2,
+.frame .text-wrapper-3,
+.frame .text-wrapper-4 {
+  color: #f4f4f3;
+  font-family: "Poppins-Medium", Helvetica, sans-serif;
+  font-size: 14px; /* Slightly larger for readability */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* Makes the links all caps */
+  position: relative;
+  cursor: pointer; /* Pointer cursor to indicate clickable items */
+  transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect for text links */
+.frame .text-wrapper:hover,
+.frame .text-wrapper-2:hover,
+.frame .text-wrapper-3:hover,
+.frame .text-wrapper-4:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+/* Button-like section */
+.frame .group {
+  height: 40px;
+  width: 120px;
+}
+
+/* Styles for the button */
+.frame .overlap-group {
+  background-color: #ffcc00; /* Bright yellow for attention */
+  border-radius: 5px; /* Rounded corners for modern look */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Button text */
+.frame .text-wrapper-5 {
+  color: #333;
+  font-family: "Poppins-Medium", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: normal;
+}
+
+/* Button hover effect */
+.frame .overlap-group:hover {
+  background-color: #333;
+}
+
+.frame .text-wrapper-5:hover {
+  color: #ffcc00; /* Text changes color when hovering over the button */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .frame {
+      flex-direction: column;
+      padding: 10px 20px;
+      height: auto;
   }
   
   .frame .div {
-    align-items: flex-start;
-    display: flex;
-    gap: 300px;
-    height: 30px;
-    position: relative;
-    width: 524px;
-  }
-  
-  .frame .text-wrapper {
-    color: #0a0808;
-    font-family: "Poppins-Medium", Helvetica;
-    font-size: 10.4px;
-    font-weight: 700;
-    height: 30px;
-    letter-spacing: 0.1px;
-    line-height: normal;
-    margin-top: -0.47px;
-    position: relative;
-    width: 100px;
-  }
-  
-  .frame .text-wrapper-2 {
-    color: #242323;
-    font-family: "Poppins-Medium", Helvetica;
-    font-size: 10.4px;
-    font-weight: 700;
-    height: 30px;
-    letter-spacing: 0.1px;
-    line-height: normal;
-    margin-top: -0.47px;
-    position: relative;
-    width: 100px;
-  }
-  
-  .frame .text-wrapper-3 {
-    color: #242323;
-    font-family: "Poppins-Medium", Helvetica;
-    font-size: 10.4px;
-    font-weight: 700;
-    height: 30px;
-    letter-spacing: 0.1px;
-    line-height: normal;
-    margin-top: -0.47px;
-    position: relative;
-    width: 100px;
-  }
-  
-  .frame .text-wrapper-4 {
-    color: #242323;
-    font-family: "Poppins-Medium", Helvetica;
-    font-size: 10.4px;
-    font-weight: 700;
-    height: 30px;
-    letter-spacing: 0.1px;
-    line-height: normal;
-    margin-top: -0.47px;
-    position: relative;
-    width: 100px;
+      gap: 25px;
+      flex-direction: column;
   }
   
   .frame .group {
-    height: 30px;
-    position: relative;
-    width: 111.94px;
+      margin-top: 15px;
   }
-  
-  .frame .overlap-group {
-    background-color: #000000;
-    border-radius: 3px;
-    height: 30px;
-    position: relative;
-    width: 110px;
-  }
-  
-  .frame .text-wrapper-5 {
-    color: #f4f4f3;
-    font-family: "Poppins-Medium", Helvetica;
-    font-size: 11.4px;
-    font-weight: 500;
-    left: 21px;
-    letter-spacing: -0.34px;
-    line-height: normal;
-    position: absolute;
-    top: 6px;
-    width: 68px;
-  }
-  
+}
